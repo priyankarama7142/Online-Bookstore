@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    height: 100vh;
+}
+.container{
+    background: rgba(225,225,225,0.7);
+    height: 70%;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 150px;
+    position: fixed;
+}
+.video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    padding: 0;
+    margin: 0px;
+    opacity: 0.6;
+}
+input[type="text"],input[type="number"],input[type="email"],input[type="password"]{
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.remember{
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <video autoplay muted loop 1oop class="video">
+            <source src="C:\Users\priya\OneDrive\Desktop\BOOKSTORE\video.mp4" type="" class="v"></source>
+        </video>
+
+        <div class="row pt-3">
+            <b style="display: flex; justify-content: center; align-items: center;">CREATE NEW CUSTOMER ACCOUNT</b>
+            <p class="ms-5 mt-2">PERSONAL INFORMATION:</p>
+        </div>
+
+            <div class="row" style="height: 80%; width: 50%; margin-left: 350px; position: fixed;">
+            <form>
+                <table border="0">
+            <tr>
+                <td><label for="" class="label">First Name:</label></td>
+                <td><input type="text" placeholder="enter first name" class="form-control" required></td>
+            </tr>
+             <tr>
+                <td><label for="">Last Name:</label></td>
+                <td><input type="text" placeholder="enter last name" class="form-control" required></td>
+            </tr>
+            <tr>
+               <td><label for="">Mobile:</label></td>
+               <td><input type="number" placeholder="enter mobile no" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Email:</label></td> 
+                <td><input type="email" placeholder="enter email id" class="form-control" required></td> 
+            </tr>
+             <tr>
+                <td><label for="">Password:</label></td>
+                <td><input type="password" placeholder="enter password" class="form-control" required></td>
+             </tr>
+             <tr> 
+                 <td><label for="">Confirm Password:</label></td>
+                 <td><input type="password" placeholder="re-enter password" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td><input type="checkbox" class="remember">
+                 <label for="remember">Remember me</label></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td> <center><a class="btn mt-4 text-light" href="#" role="button" style="background:linear-gradient(#60c8e4,rgb(128, 218, 148));">Submit</a></center> </td>
+              </tr>
+            </table>         
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

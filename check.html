@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    height: 100vh;
+}
+.container-fluid{
+    height: 100vh;
+    width: 100%;
+    background: url(mybg.jpeg);
+    background-size: cover ;
+    background-position: center ;
+}
+header{
+    height: 15%;
+    width: 100%;
+    background: linear-gradient(#7cb0cc,rgb(141, 191, 167));
+    /* background-color: #c4eef1; 7cb0cc */
+}
+.container{
+    background: linear-gradient(#7cb0cc,rgb(141, 191, 167));
+    height: 70%;
+    width: 80%;
+    margin-top: 100px;
+}
+.wrapper{
+    width: 100%;
+    min-height: 50vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box{
+    position: relative;
+    width: 450px;
+    backdrop-filter: blur(25px);
+}
+input-field:focus ~ .label,.input-field:valid .label{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+.icon{
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px;
+}
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.input_box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.input-field{
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    background: transparent;
+    padding-inline: 20px 50px;
+    border: 2px solid;
+    border-radius: 20px;
+    outline: none;
+}
+#user{
+    margin-bottom: 10px;
+}
+.label{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    transition: .2s;
+}
+.input-submit{
+    width: 50%;
+    height: 50px;
+    background: linear-gradient(#7cb0cc,rgb(141, 191, 167));
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+.forgot a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+           <div class="row">
+              <div class="col-1 mt-2 ms-1">
+                <img src="C:\Users\priya\OneDrive\Desktop\BOOKSTORE\logo1.jpg" height="50px" width="50px" alt="Logo" id="logo">
+              </div>
+              <div class="col-1"></div>
+              <div class="col-3">
+                <div class="card mt-2 shadow-lg">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-2">
+                           <i class="fa-solid fa-search"></i>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-8">
+                            <input type="text" placeholder="Search" id="" style="border: none;">
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-1">
+                <center>
+                <dialog id="d">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                 <div class="row mt-4 ms-2">
+                                    <b>CUSTOMER LOGIN</b>
+                                 </div>
+                                 <div class="row mt-4 ms-3 pt-3" style="background: linear-gradient(#b0ccda,rgb(225, 233, 229)); height: 250px; width: 400px;">
+                                      <h6><b>NEW CUSTOMERS</b></h6>
+                                      <p>Creating an account has many benefits: check out faster, keep more than one address, track orders and more...</p>
+                                      <div class="col-3"></div>
+                                      <div class="col-6">
+                                        <a class="btn mb-4 text-light" href="#" role="button" style="background: linear-gradient(#7cb0cc,rgb(141, 191, 167));">Create an account</a>
+                                      </div>
+                                      <div class="col-3"></div>
+                                 </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-7 mt-3" style="background: linear-gradient(#b0ccda,rgb(225, 233, 229)); height: 450px; width: 550px;">
+                                <div class="row mt-2">
+                                    <b style="display: flex; justify-content: center; align-items: center;">REGISTERED CUSTOMERS</b>
+                                    <p style="display: flex; justify-content: center; align-items: center;">If you have an account, Sign in with your email address</p>
+                                </div>
+                                <div class="row">
+                                    <div class="wrapper">
+                                    <div class="login-box">
+                                        <div class="input box">
+                                            <input type="text" id="user" class="input-field" required>
+                                            <label for="user" class="label">Username</label>
+                                            <i class="fa-solid fa-user icon"></i>
+                                        </div>
+                
+                                        <div class="input box">
+                                            <input type="password" id="pass" class="input-field" required>
+                                            <label for="pass" class="label">Password</label>
+                                            <i class="fa-solid fa-lock icon"></i>
+                                        </div>
+                
+                                        <div class="remember-forgot">
+                                            <div class="remember-me">
+                                                <input type="checkbox" id="remember">
+                                                <label for="remember">Remember me</label>
+                                            </div>
+                                        </div>
+                
+                                        <div class="input_box">
+                                            <input type="submit" class="input-submit" value="SIGN IN">
+                                        </div>
+                
+                                        <div class="forgot">
+                                            <a href"#">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                
+                            </div>
+                        </div>
+                
+                    </div>
+                    <button onclick="d.close()">close</button>
+                </dialog>
+            </center>
+                <button onclick="d.showModal()"> <a href="#" style="color: black; text-decoration: none;"><i class="fa-solid fa-user"></i>My account</a></button>
+            
+              </div>
+            
+              <div class="col-1">
+                <a href="#" style="color: black; text-decoration: none;"><i class="fa-solid fa-lock"></i>Sign in</a>
+              </div>
+              <div class="col-1">
+                <a href="#" style="color: black; text-decoration: none;"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+              </div>
+              <div class="col-2">
+               <a href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+             
+           </div>
+           <div class="row mt-2">
+               <div class="col-1"></div>
+               <div class="col-2">
+                  <a href="#" style="color: black; text-decoration: none;"><b>HOME</b></a>
+               </div>
+               <div class="col-2">
+                <a href="#" style="color: black; text-decoration: none;"><b>ALL CATEGORIES</b></a>
+               </div>
+               <div class="col-2">
+                <a href="#" style="color: black; text-decoration: none;"><b>NEW ARRIVALS</b></a>
+               </div>
+               <div class="col-2">
+                <a href="#" style="color: black; text-decoration: none;"><b>CONTACT US</b></a>
+               </div>
+               <div class="col-2">
+                <a href="#" style="color: black; text-decoration: none;"><b>ABOUT US</b></a>
+               </div>
+
+           </div>
+        </header>        
+    </div>
+    
+</body>
+</html>
